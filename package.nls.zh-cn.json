@@ -1,0 +1,11 @@
+{
+  "displayName": "Markdown Editor Pro",
+  "description": "基于 Vditor 的所见即所得 Markdown 编辑器，提供智能图片组织、对齐优化与自动清理。",
+  "config.lineNumbers": "启用代码块行号。",
+  "config.tab": "编辑器中使用的制表符。",
+  "config.mathEngine": "用于渲染公式的数学引擎。",
+  "config.uploads.location": "图片存储目录（相对于当前 Markdown 文件）。",
+  "config.uploads.pattern": "图片命名模式。支持变量: ${fileName}, ${now}, ${year}, ${month}, ${day}, ${h1Index}...${h6Index}, ${imgIndex}。",
+  "config.uploads.autoOrganize": "保存时根据命名模式自动重命名和整理图片目录中的图片。",
+  "config.uploads.align": "粘贴图片的默认对齐方式。"
+}

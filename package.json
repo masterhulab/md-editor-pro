@@ -1,0 +1,120 @@
+{
+  "name": "md-editor-pro",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "icon": "media/icon.jpg",
+  "version": "0.1.0",
+  "publisher": "masterhulab",
+  "author": {
+    "name": "masterhulab"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/masterhulab/md-editor-pro.git",
+    "directory": "packages/md-editor-pro"
+  },
+  "bugs": {
+    "url": "https://github.com/masterhulab/md-editor-pro/issues"
+  },
+  "homepage": "https://github.com/masterhulab/md-editor-pro/blob/master/README.md",
+  "keywords": [
+    "markdown",
+    "wysiwyg",
+    "vditor",
+    "editor",
+    "preview",
+    "image",
+    "upload",
+    "paste"
+  ],
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Visualization"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "masterhulab.md-editor-pro",
+        "displayName": "Markdown Editor",
+        "priority": "default",
+        "selector": [
+          {
+            "filenamePattern": "*.md"
+          }
+        ]
+      }
+    ],
+    "configuration": {
+      "title": "Markdown Editor Pro",
+      "properties": {
+        "md-editor-pro.preview.lineNumbers": {
+          "type": "boolean",
+          "default": true,
+          "description": "%config.lineNumbers%"
+        },
+        "md-editor-pro.tab": {
+          "type": "string",
+          "default": "  ",
+          "description": "%config.tab%"
+        },
+        "md-editor-pro.preview.math.engine": {
+          "type": "string",
+          "enum": [
+            "KaTeX",
+            "MathJax"
+          ],
+          "default": "KaTeX",
+          "description": "%config.mathEngine%"
+        },
+        "md-editor-pro.uploads.location": {
+          "type": "string",
+          "default": "images",
+          "description": "%config.uploads.location%"
+        },
+        "md-editor-pro.uploads.pattern": {
+          "type": "string",
+          "default": "${h1Index}-${imgIndex}",
+          "description": "%config.uploads.pattern%"
+        },
+        "md-editor-pro.uploads.autoOrganize": {
+          "type": "boolean",
+          "default": true,
+          "description": "%config.uploads.autoOrganize%"
+        },
+        "md-editor-pro.uploads.align": {
+          "type": "string",
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ],
+          "default": "center",
+          "description": "%config.uploads.align%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "build": "npm run compile",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.47.0",
+    "typescript": "^5.1.6"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "displayName": "Markdown Editor Pro",
+  "description": "WYSIWYG Markdown editor for VS Code powered by Vditor, with smart image organization, alignment handling, and cleanup.",
+  "config.lineNumbers": "Enable line numbers in code blocks.",
+  "config.tab": "Tab characters used in the editor.",
+  "config.mathEngine": "Math engine used for rendering equations.",
+  "config.uploads.location": "Directory to store images relative to the markdown file.",
+  "config.uploads.pattern": "Image naming pattern. Supported variables: ${fileName}, ${now}, ${year}, ${month}, ${day}, ${h1Index}...${h6Index}, ${imgIndex}.",
+  "config.uploads.autoOrganize": "Automatically rename and reorganize images in the image directory based on the naming pattern when saving.",
+  "config.uploads.align": "Default alignment for pasted images."
+}
